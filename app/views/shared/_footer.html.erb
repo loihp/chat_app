@@ -1,0 +1,24 @@
+<footer class="fixed bottom-0 w-full bg-gray-800 px-6 py-4 mt-12">
+  <div class="container mx-auto flex justify-between items-center">
+    <div>
+      <a href="/" class="text-white text-lg font-semibold mb-2 block">Logo</a>
+      <nav>
+        <a href="/home" class="text-gray-300 text-sm sm:text-base mx-3">Home</a>
+        <a href="/about" class="text-gray-300 text-sm sm:text-base mx-3">About Me</a>
+        <a href="/blog" class="text-gray-300 text-sm sm:text-base mx-3">Blog</a>
+        <a href="/contactus" class="text-gray-300 text-sm sm:text-base mx-3">Contact Us</a>
+      </nav>
+    </div>
+
+    <div>
+      <h3 class="text-white text-sm font-semibold mb-2">Stay in touch</h3>
+      <%= form_with model: @user, url: subscription_path, class: "mb-4" do |f| %>
+        <%= f.email_field :email_subcrible, class: "px-3 py-2 text-sm w-64", placeholder: "Enter your email" %>
+        <%= f.submit "Subscribe", class: "px-3 py-2 bg-blue-500 text-white text-sm ml-2" %>
+      <% end %>
+      <div class="flex space-x-3">
+
+      </div>
+    </div>
+  </div>
+</footer>
